@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Styled by Suki | Virtual Styling</title>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5ebdb;--ink:#2b0e15;--mute:#6f5258;--bur:#6b1426;--line:#cdb99b;--field:#fbf5ea;--on:#f5ebdb;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#3a0c18;--ink:#f5ebdb;--mute:#d2b9ae;--bur:#f5ebdb;--line:#6b2a39;--field:#4a1523;--on:#3a0c18}}
+:root[data-theme="dark"]{--bg:#3a0c18;--ink:#f5ebdb;--mute:#d2b9ae;--bur:#f5ebdb;--line:#6b2a39;--field:#4a1523;--on:#3a0c18}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Karla,system-ui,sans-serif}
+main{max-width:600px;margin:0 auto;padding:20px 22px 70px}
+h1,h2{font-family:"Young Serif",Georgia,serif;font-weight:400;color:var(--bur);margin:0}
+h1{font-size:clamp(44px,13vw,70px);line-height:1;margin-bottom:18px}
+h2{font-size:30px;margin:54px 0 14px}
+.hero{background:var(--bur);color:var(--on);text-align:center;padding:calc(72px + env(safe-area-inset-top,0px)) 24px 64px}
+.hero h1{color:var(--on);font-size:clamp(52px,16vw,92px);line-height:.95;margin:0 0 20px}
+.hero .tag{font-size:18px;letter-spacing:.04em;margin:0 0 30px}
+.hero .btn{background:var(--on);color:var(--bur);border-color:var(--on)}
+.hero .btn.alt{background:transparent;color:var(--on)}
+.hero .rule{width:56px;height:2px;background:var(--on);margin:0 auto 22px;opacity:.7}
+.most{font-size:14px;font-weight:700;color:var(--bur);margin-top:4px}
+p{margin:0 0 14px}
+.btn{display:inline-block;background:var(--bur);color:var(--on);border:2px solid var(--bur);border-radius:3px;padding:12px 22px;font:700 16px Karla,sans-serif;text-decoration:none;cursor:pointer}
+.btn.alt{background:transparent;color:var(--bur)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.item{margin-bottom:22px}
+.line{display:flex;align-items:baseline;gap:8px;font-weight:700;font-size:19px}
+.line i{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+.item p{color:var(--mute);margin:2px 0 0;max-width:46ch}
+.fine{color:var(--mute);font-size:15px}
+ol,ul{padding-left:20px;margin:0}
+li{margin-bottom:7px}
+label{display:block;font-weight:700;margin:18px 0 5px}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--field);border:1.5px solid var(--line);border-radius:3px;padding:11px}
+textarea{min-height:90px}
+#out{white-space:pre-wrap;background:var(--field);border:1.5px dashed var(--bur);padding:14px;margin-top:22px;display:none}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+details{border-top:1px solid var(--line);padding:13px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{font-weight:700;cursor:pointer}
+details p{margin:8px 0 0;color:var(--mute)}
+</style>
+</head>
+<body>
+<header class="hero">
+<h1>Styled<br>by Suki</h1>
+<div class="rule"></div>
+<p class="tag">Virtual styling for every occasion</p>
+<a class="btn" href="#inquire">Book a styling</a> &nbsp;<a class="btn alt" href="#prices">See prices</a>
+</header>
+<main>
+<h2 id="prices">Services</h2>
+<p class="fine">Prices in USD. Final quote confirmed after you inquire.</p>
+<div class="item"><div class="line">Mini consult<i></i>$25</div><p>A 30-minute call and 3 outfit ideas. A good place to start.</p></div>
+<div class="item"><div class="line">Outfit pack<i></i>$60</div><p>5 full looks with links to shop, picked around your budget.</p></div>
+<div class="item"><div class="line">Event styling<i></i>$45 to $90</div><p>Dress, shoes, bag and jewelry for one occasion. You get 3 looks to choose from.</p><div class="most">Most booked</div></div>
+<div class="item"><div class="line">Closet edit<i></i>$70</div><p>Send photos of what you own. Get 8 outfits from it, plus what's worth adding.</p></div>
+<div class="item"><div class="line">Capsule wardrobe<i></i>$150</div><p>15 to 20 pieces that all go together, with a lookbook you can keep.</p></div>
+
+<p class="fine" style="margin-top:28px">Extras: rush delivery in 24 hours +$20 · extra look +$10 · one more round of changes +$10</p>
+
+<h2>How it works</h2>
+<ol><li>Send your inquiry below.</li><li>Get your quote within 1 to 2 days.</li><li>Pay half to book your spot.</li><li>Receive your lookbook with shopping links.</li><li>You pay the rest and enjoy your outfits.</li></ol>
+
+<h2 id="inquire">Start your inquiry</h2>
+<form onsubmit="return false">
+<label for="n">Your name</label><input id="n" autocomplete="name">
+<label for="s">What do you want?</label>
+<select id="s"><option>Mini consult</option><option>Outfit pack</option><option>Event styling</option><option>Closet edit</option><option>Capsule wardrobe</option></select>
+<label for="o">What's the occasion, and when?</label><input id="o" placeholder="Birthday dinner, Nov 20">
+<label for="b">Your budget</label><input id="b" placeholder="About $150 total">
+<label for="z">Sizes and colors you love</label><input id="z">
+<label for="i">Anything else?</label><textarea id="i" placeholder="Links, inspo, things you won't wear"></textarea>
+<div class="row"><button class="btn" id="mk">Create my message</button></div>
+</form>
+<div id="out" role="status"></div>
+<div class="row" id="act" style="display:none"><button class="btn" id="cp">Copy message</button><a class="btn alt" id="ml" href="#">Send by email</a></div>
+
+<h2>Questions</h2>
+<details><summary>Do I buy the clothes from you?</summary><p>No. You get shopping links and buy from the stores yourself.</p></details>
+<details><summary>What if I don't love the looks?</summary><p>Tell us what's off and we'll adjust. Extra rounds of changes are $10.</p></details>
+<details><summary>Can I get a refund?</summary><p>The deposit isn't refundable once styling has started. If something goes wrong, message us and we'll sort it out.</p></details>
+<details><summary>Are your links affiliate links?</summary><p>Some may be. It never changes what you pay.</p></details>
+</main>
+<script>
+var EMAIL="";
+function g(i){return document.getElementById(i).value.trim()||"-"}
+document.getElementById("mk").onclick=function(){
+var t="Hi Styled by Suki! I'd like to book a styling.\n\nName: "+g("n")+"\nService: "+g("s")+"\nOccasion and date: "+g("o")+"\nBudget: "+g("b")+"\nSizes and colors: "+g("z")+"\nNotes: "+g("i");
+var o=document.getElementById("out");o.textContent=t;o.style.display="block";
+document.getElementById("act").style.display="flex";
+document.getElementById("ml").href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Styled by Suki: styling inquiry")+"&body="+encodeURIComponent(t);
+document.getElementById("cp").onclick=function(){
+try{navigator.clipboard.writeText(t).then(function(){document.getElementById("cp").textContent="Copied"})}catch(e){var r=document.createRange();r.selectNode(o);getSelection().removeAllRanges();getSelection().addRange(r)}
+};
+};
+</script>
+</body>
+</html>
